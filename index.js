@@ -32,6 +32,7 @@ app.get('/api/posts/:year/:month', (req, res) => { //parameter defined by : and 
 })
 
 //PORT
+console.log("process.env ", process.env)
 const port = process.env.PORT || 3000 // global object process, property env - environment variable, PORT - is used if it is set otherwise 3000
 app.listen(port, () => { console.log('listening on port ' + port) }) //fnc when apps starts listening on given port
 
