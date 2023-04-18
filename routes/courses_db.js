@@ -3,10 +3,10 @@ const Joi = require('joi');//load joi module - returns class
 const express = require('express') //returns function
 const router = express.Router();
 
-const connection = require('../../database');
+const connection = require('../database');
 const { func } = require('joi');
 
-const pool = require('../../database')
+const pool = require('../database')
 
 //need to enable parsing json objects 
 // in body of requests

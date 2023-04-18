@@ -2,8 +2,8 @@
 //import dotenv from 'dotenv'
 const mysql = require('mysql2')
 const dotenv = require('dotenv').config()
-console.log(dotenv.parsed.MYSQL_DATABASE)
-console.log(process.env.MYSQL_HOST)
+//console.log(dotenv.parsed.MYSQL_DATABASE)
+//console.log(process.env.MYSQL_HOST)
 //collection of connections to db
 const pool = mysql.createPool({
     host: process.env.MYSQL_HOST,

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A demo REST API with Node.js Express.js and MySQL for most popular programming languages",
   "scripts": {
-    "start": "node api/index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
