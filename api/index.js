@@ -6,7 +6,7 @@ const app = express()//returns object type Express, name it app because conventi
 const courses = require('./routes/courses_db')
 
 
-
+app.use(express.static('public'))
 //app.use(courses)
 app.use('/api/courses', courses)//for any
 //routes that start with api/courses, use courses router
@@ -21,7 +21,7 @@ app.use(express.json());
 //scpecify route-url
 //callback fnc - route handler
 app.get('/', (req, res) => {
-    res.send('hello worldddd')
+    res.sendFile('index.html', { root: path.join(__dirname, 'public') });
 }) //second arg is callback function - ROUTE HANDLER
 
 //query string parameters - in url after ? 
@@ -36,3 +36,5 @@ console.log("process.env ", process.env)
 const port = process.env.PORT || 3000 // global object process, property env - environment variable, PORT - is used if it is set otherwise 3000
 app.listen(port, () => { console.log('listening on port ' + port) }) //fnc when apps starts listening on given port
 
+
+module.exports = app
